@@ -1,0 +1,88 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@ensdomains/react-ens-address": "^0.0.31",
+    "@ethersproject/units": "^5.7.0",
+    "@flashbots/ethers-provider-bundle": "^0.4.3",
+    "@fontsource/inter": "^5.0.8",
+    "@metamask/jazzicon": "^2.0.0",
+    "@mui/icons-material": "^5.14.9",
+    "@mui/material": "^5.14.10",
+    "@usedapp/core": "^1.2.13",
+    "@web3modal/ethereum": "^2.4.3",
+    "@web3modal/react": "^2.4.3",
+    "antd": "^5.9.4",
+    "assert": "^2.1.0",
+    "axios": "^1.2.5",
+    "bootstrap": "^5.2.3",
+    "cra-template": "1.2.0",
+    "dotenv": "^16.0.0",
+    "emailjs-com": "^3.2.0",
+    "ethers": "^5.7.0",
+    "framer-motion": "^10.16.4",
+    "intersection-observer": "^0.12.2",
+    "lucide-react": "^0.279.0",
+    "mypow-react-ens-address": "^3.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-blockies": "^1.4.1",
+    "react-bootstrap": "^2.7.1",
+    "react-dataflow-editor": "^0.1.6",
+    "react-dom": "^18.2.0",
+    "react-font": "^1.2.1",
+    "react-helmet-async": "^1.0.7",
+    "react-hooks": "^1.0.1",
+    "react-i18next": "^13.2.2",
+    "react-icons": "^4.11.0",
+    "react-pro-sidebar": "^1.1.0-alpha.1",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
+    "react-transition-group": "^4.4.2",
+    "stream-browserify": "^3.0.0",
+    "styled-components": "^6.0.8",
+    "swiper": "^8.4.6",
+    "typewriter-effect": "^2.18.2",
+    "uuid": "^9.0.0",
+    "viem": "^1.12.2",
+    "wagmi": "^1.4.2",
+    "web-vitals": "^3.4.0",
+    "web3": "^1.6.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build && cp build/index.html build/404.html",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
