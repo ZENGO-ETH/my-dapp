@@ -1,10 +1,18 @@
-import Blockies from 'react-blockies'
-import "./App.css"
-import Connect from "./components/Address.tsx"
+import "./main.json";
+import Rpc from "./Components/ConnectTransaction.tsx";
+import Connect from "./Components/ConnectWallet.tsx";
 
-export default function App() {
-
+function App() {
   return (
-      < Connect />
-  )
+   <div vlassName="body">
+    <div className="app">
+     <center>
+      <Connect />
+      <Rpc />
+     </center>
+    </div>
+   </div>
+  );
 }
+
+export default App;
