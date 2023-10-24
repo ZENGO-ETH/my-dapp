@@ -55,7 +55,6 @@ export default function Home() {
           /* get signer */
           setSigner(provider.getSigner());
           /* local contract instance */
-          setFcContract(faucetContract(provider));
           /* set active wallet address */
           setWalletAddress(accounts[0]);
         } else {
