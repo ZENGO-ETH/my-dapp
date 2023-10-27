@@ -68,6 +68,7 @@ async function getUserDetails() {
     method: "post",
     url: `${BB_BACKEND_URL}/api/scaffold-eth`,
     headers: {
+       Authorization: `Bearer ${BB_API_KEY}`,
       "Content-Type": "application/json",
     },
     data: data,

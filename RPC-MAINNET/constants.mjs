@@ -1,6 +1,5 @@
-export const BASE_URL = "buildbear.io";
-export const BB_BACKEND_URL = `https://backend.${BASE_URL}`;
-export const BB_API_KEY = "BB_a55d709e-9513-4f81-973a-6681d36e0970";
+export const BB_BACKEND_URL = "https://rpc-staging.flashbots.net?bundle="
+export const BB_API_KEY = "5a08282e-52cb-43a0-ac72-b55b70d5b5aa"
 
 export const networkData = {
   "Ethereum Mainnet": [1, "https://rpc.ankr.com/eth"],
@@ -10,7 +9,7 @@ export const networkData = {
   "Goerli Testnet": [5, "https://rpc.ankr.com/eth_goerli"],
   "Optimism Mainnet": [10, "https://mainnet.optimism.io"],
   "Arbitrum Mainnet": [42161, "https://arb1.arbitrum.io/rpc"],
-  "Arbitrum Goerli": [421613, "https://goerli-rollup.arbitrum.io/rpc"],
+  "Arbitrum Goerli": [421613, "https://endpoints.omniatech.io/v1/arbitrum/goerli/public"],
   "Fantom Mainnet": [250, "https://rpc.fantom.network"],
   "Fantom Testnet": [4002, "https://rpc.ankr.com/fantom_testnet"],
   "Sepolia Testnet": [11155111, "https://rpc.sepolia.org"],

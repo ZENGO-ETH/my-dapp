@@ -1,3 +1,4 @@
+import Roll from "./Roll.tsx";
 //import "./../App.css";
 import Blockies from "react-blockies";
 import { Button, Input} from "antd";
@@ -32,7 +33,6 @@ export default function Home() {
         /* get signer */
         setSigner(provider.getSigner());
         /* local contract instance */
-        setFcContract(faucetContract(provider));
         /* set active wallet address */
         setWalletAddress(accounts[0]);
       } catch (err) {
@@ -101,22 +101,21 @@ export default function Home() {
        <h1>  ZENGO-ETH TOKEN </h1>
 	<br />
         <Button
-          onClick={connectWallet}
-         >
-         {walletAddress && walletAddress.length > 0
-         ? `${walletAddress.substring(
-         0,
-         6
-         )}...${walletAddress.substring(38)}`
-         : "Connect Wallet"}
+         onClick={connectWallet}
+          >
+          {walletAddress && walletAddress.length > 0
+          ? `${walletAddress.substring(
+          0,
+          6
+          )}...${walletAddress.substring(38)}`
+          : "Connect Wallet"}
           </Button>
-	    <br />
+	  <br />
  	  <br />
           <Button> {URL} </Button>
           <br />
-	  <br />
-	  <Button onClick={txhash}> TX </Button>
-             </div>
-              </div>
+	  <br />           
+           </div>
+            </div>
    );
   }
