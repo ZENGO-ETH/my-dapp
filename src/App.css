@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+
+.p {
+  font-family: "Geeza Pro", "Noto Naskh Arabic", "Droid Serif", "Times New Roman", serif; 
+}
+
+/* Sans-serif Arabic font stack 
+ * Titles
+ */
+h1, h2, h3, h4, h5, h6,
+.sans-serif {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Dubai, "Segoe UI", Tahoma, "Noto Sans Arabic UI","Dejavu Sans", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 1rem;
+  text-align: center;
+}
+
+.nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.site-title {
+  font-size: 2rem;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+
+.nav li.active {
+  background-color: #555;
+}
+
+.nav li:hover {
+  background-color: #777;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+body{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 2em;
+    color: #555;
+    cursor:default;
+}
+.logo span {
+    color: #668Ca3;
+}
+.navigation{
+    margin-left: -300px;
+}
+.navigation a {
+    font-size: 1.1em;
+    color: #555;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: .3s;
+}
+.navigation a:hover {
+    color: #668Ca3;
+}
+.btn-talk {
+    color: #ffff;
+    text-decoration: none;
+    padding: 8px 35px;
+    background: #668Ca3;
+    border-radius: 10px;
+    border: 2px solid #668Ca3;
+    border: 2px solid #668Ca3;
+    font-weight: 500;
+    transition: .3s;
+}
+.btn-talk:hover {
+    color: #668Ca3;
+    background: transparent;
+}
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: 100px 100px;
+    display: flex;
+    align-items: center;
+    background-color: #E2E2E2;
+    padding: 30px 100px;
+}
+.content {
+    max-width: 500px;
+    color:#555;
+}
+.content h2{
+    font-size: 3em;
+}
+.content h2 span {
+    color: #668Ca3;
+}
+.content h4 {
+    font-size: 2em;
+}
+.content p {
+    padding: 10px 0 40px;
+}
+
+.btn-group a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 40px;
+    background: #668Ca3;
+    border-radius: 10px;
+    border: 2px solid #668Ca3;
+    font-weight: 500;
+    transition: .3s;
+}
+.btn-group a:hover:nth-child(1) {
+    color: #668Ca3;
+    background:transparent;
+}
+
+.btn-group a:nth-child(2){
+    color: #668Ca3;
+    background: transparent;
+    margin-left: 30px;
+    padding: 10px 30px;
+}
+.btn-group a:hover:nth-child(2){
+    color: #fff;
+    background: #668Ca3;
+}
+.social-icon {
+    position: absolute;
+    bottom: 50px;
+}
+.social-icon a {
+    display: inline-block;
+    width: 35px;
+    height: 45px;
+    background: #668Ca3;
+    border-radius: 50%;
+    margin-right: 27px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #668Ca3;
+    outline: 2px solid #668Ca3;
+    transition: .3s;
+    text-decoration: none;
+}
+.social-icon a:hover {
+    transform: translateY(-5%);
+}
+.social-icons a i {
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .s_c {
+        padding-top: 40px;
+    }
+}
+
+.page-enter {
+    transform: translateY(100%);
+}
+
+.page-enter-active {
+    transform: translateY(0%);
+    transition: all 400ms ease-out;
+}
+
+.page-exit {
+    transform: translateY(0%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.page-exit-active {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-130%);
+    transition: all 400ms ease-out;
+}
+
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1140px;
+    }
+}
