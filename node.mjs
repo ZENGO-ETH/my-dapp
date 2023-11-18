@@ -1,12 +1,13 @@
-import axios from "axios";
+import ethers from "ethers";
 
-const token = "5a08282e-52cb-43a0-ac72-b55b70d5b5aa"
+async function main(){
+  const URL = "https://rpc-staging.flashbots.net?bundle=5a08282e-52cb-43a0-ac72-b55b70d5b5aa"
+  const provider = new ethers.providers.JsonRpcProvider(URL);
+  const signer = provider.getSigner()
+  const Block = await provider.getBlockNumber()
 
-const instance = axios.create({
-  headers: {
-    'Authorization': '5a08282e-52cb-43a0-ac72-b55b70d5b5aa',
-    'Content-Type': 'application/json'
-  }
-});
+  //console.log(signer)
+  console.log(Block)
+}
 
-console.log(instance)
+main();

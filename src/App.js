@@ -1,30 +1,19 @@
-import React, { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  BrowserRouter as Router,
-  useLocation,
-} from "react-router-dom";
-import withRouter from "./hooks/withRouter.js";
-import AppRoutes from "./routes";
-import Headermain from "./header";
+//import Main from "./Components/main.js";
+import RPC from "./Components/RPC.js";
 import "./App.css";
+import Connect from "./Components/ConnectWallet.tsx";
+import Block from "./Components/Blocks.tsx";
+import Balance from "./Components/Balance.tsx";
 
-function _ScrollToTop(props) {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return props.children;
-}
-const ScrollToTop = withRouter(_ScrollToTop);
+export default function App(){
 
-export default function App() {
-  return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <ScrollToTop>
-        <Headermain />
-        <AppRoutes />
-      </ScrollToTop>
-    </Router>
+
+ return(
+   <div className="app">
+    <Connect />
+    <Block />
+    <Balance />
+    <RPC />
+   </div>
   );
 }

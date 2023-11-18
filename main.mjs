@@ -1,14 +1,18 @@
-import axios from "axios";
+import pkg from 'dotenv';
+import ethers from "ethers";
 
-function main(){
-const instance = axios.create({
-  baseURL: 'https://rpc-staging.flashbots.net?bundle=5a08282e-52cb-43a0-ac72-b55b70d5b5aa',
-  timeout: 1000,
-  method: 'GET',
-  url: 'posts'
-})
+const API_KEY = process.env.REACT_APP_API_KEY;
 
-  console.log(instance)
+
+async function main(){
+  const provider = new ethers.providers.InfuraProvider(
+    'mainnet',
+    API_KEY
+  );
+
+  const bal = await provider.getBalance("ethers.eth")
+  const balance = ethers.utils.formatEther(bal)
+  console.log(balance)
 }
 
-main()
+main();
