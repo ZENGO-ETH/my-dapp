@@ -9,6 +9,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins' , sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -19,6 +21,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   align-items: center;
+  background-color: LightSeaGreen;
+  color: black;
 }
 
 code {

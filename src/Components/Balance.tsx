@@ -18,12 +18,25 @@ function App() {
 
     console.log(etherBalance)
 
-    setBalance(`ETH ${etherBalance}`);
+    setBalance(`${etherBalance}`);
   };
 
   return (
-    <div className="app">
-      <main className="app__main">
+   <div className="app">
+    <br />
+   <div className="balance">
+    <h1>
+     Get 💲 Balance 
+    </h1>
+   </div>
+    <br />
+    <div className="wrapper">
+    <div className="credit-card w-full lg:w-1-2 sm:w-auto shadow-lg mx-auto ">
+     <main className="mt-4 p-4">
+       <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+         <div class="navbar-header">
+	
         <h1>Get Ξther Balance</h1>
 
         <Input
@@ -43,10 +56,16 @@ function App() {
        </div>
         <br />
         <div className="app__balance">
-          <p> {balance} </p>
+          <p> 🔎 Balance: {balance} </p>
+           </div>
+          <br />
+         </div>
         </div>
+       </nav>
       </main>
+     </div>
     </div>
+   </div>
   );
 }
 

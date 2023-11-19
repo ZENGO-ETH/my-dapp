@@ -14,6 +14,7 @@ import { Web3 } from "web3";
 export default function Home() {
   const [walletAddress, setWalletAddress] = useState("");
   const [signer, setSigner] = useState();
+  const [network, setNetwork] = useState('');
     
   const URL = "https://rpc-staging.flashbots.net?bundle=5a08282e-52cb-43a0-ac72-b55b70d5b5aa"
 
@@ -32,6 +33,7 @@ export default function Home() {
         const accounts = await provider.send("eth_requestAccounts", []);
         /* get signer */
         setSigner(provider.getSigner());
+        
         /* local contract instance */
         /* set active wallet address */
         setWalletAddress(accounts[0]);
@@ -80,6 +82,25 @@ export default function Home() {
       console.log("Please install MetaMask");
     }
   };
+/*  
+   const Wallet = async () => {
+    const result = await window.ethereum.request({
+      method: "wallet_addEthereumChain",
+      params: [{
+        chainId: "0x89",
+        rpcUrls: ["https://polygon-rpc.com/"],
+        chainName: "Matic Mainnet",
+        nativeCurrency: {
+          name: "MATIC",
+          symbol: "MATIC",
+          decimals: 18
+        },
+        blockExplorerUrls: ["https://polygonscan.com/"]
+      }]
+    });
+  }
+ 
+*/
 
   return (
      <div className="app">
@@ -88,8 +109,17 @@ export default function Home() {
       <h1> SCOOPI-TESTNET </h1>
      </div>
       <br />
-        <div className="connect">
+      <br />
+      <div className="address">
+      <h1>
+       Address ⚙️ Connect
+      </h1>
+      </div>
+      <br />
+        <div className="wrapper">
+        <br />
         <h1>Get Ξther Address</h1>
+       <div className="Button">
         <Button
          onClick={connectWallet}
           >
@@ -100,7 +130,9 @@ export default function Home() {
           )}...${walletAddress.substring(38)}`
           : "Connect Wallet"}
           </Button>
+         </div>
   	  <br />
+          <br />
 	  </div>
            <br />
            </div>

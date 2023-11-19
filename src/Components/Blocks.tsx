@@ -21,11 +21,24 @@ export default function App(){
 
   
   return (
+  <div className="app">
    <div className="block">
-    <h1>Get Ξther BlockNumber </h1>
-    <Button onClick={handleButton1}> Latest_Block </Button>
-    <p> {blockNumber} </p>
+  <h1>
+  Blocks 🎲 Explor 
+  </h1>
+ </div>
+  <br />
+   <div className="wrapper">
     <br />
+    <div className="blocks">
+     <h1>Get Ξther BlockNumber </h1>
+      <Button onClick={handleButton1}> Latest_Block </Button>
+       <br />
+       <br />
+       <p> 🌏 Latest_Blocks: {blockNumber} </p>
+     <br />
+    </div>
    </div>
+  </div>
   );
 }

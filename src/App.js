@@ -4,6 +4,7 @@ import "./App.css";
 import Connect from "./Components/ConnectWallet.tsx";
 import Block from "./Components/Blocks.tsx";
 import Balance from "./Components/Balance.tsx";
+import TX from "./Components/Transaction.js";
 
 export default function App(){
 
@@ -14,6 +15,7 @@ export default function App(){
     <Block />
     <Balance />
     <RPC />
+    <TX />
    </div>
   );
 }

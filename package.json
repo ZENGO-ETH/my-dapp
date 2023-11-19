@@ -129,5 +129,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "����\u0000\u0010JFIF\u0000\u0001\u0001\u0000\u0000\u0001\u0000\u0001\u0000\u0000��\u0000�\u0000\u0004\u0004\u0004\u0004\u0005\u0004\u0005\u0006\u0006\u0005\u0007\b\u0007\b\u0007",
+  "main": "postcss.config.js",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  },
+  "repository": "git+https://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@github.com/Near-Sudan/my-dapp.git",
+  "author": "Near-Sudan <defenshi989@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Near-Sudan/my-dapp/issues"
+  },
+  "homepage": "https://github.com/Near-Sudan/my-dapp#readme"
 }

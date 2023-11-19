@@ -41,16 +41,43 @@ const [bundle, setBundle] = useState();
     setFlashbotsBundleQuery("https://rpc.flashbots.net/bundle?id=" + bundleUuid);
   }, [bundleUuid]);
 
-
+/*
+  const Wallet = async () => {
+    const result = await window.ethereum.request({
+      method: "wallet_addEthereumChain",
+      params: [{
+        chainId: "0x1",
+        rpcUrls: [""],
+        chainName: "Flashbots Mainnet",
+        nativeCurrency: {
+          name: "ETH",
+          symbol: "ETH",
+          decimals: 18
+        },
+        blockExplorerUrls: ["https://etherscan.io/"]
+      }]
+    });
+  }
+*/
   return (
-    <div className="app">
-     <h1>Get Ξther Get RPC </h1>
+   <div className="app">
+    <br />
+   <div className="rpc">
+    <h1>
+     Get RPC Ethereum 🚀 Flashbots 
+    </h1>
+   </div>
+     <br />
+      <div className="wrapper">
+       <br />
+       <h1>Get Ξther Get RPC </h1>
             <Input
               value={bundleUuid}
               onChange={e => {
                 setBundleUuid(e.target.value);
               }}
             />
+	    <br />
 	    <br />
             <Button
               onClick={() => {
@@ -59,12 +86,13 @@ const [bundle, setBundle] = useState();
               }}
             >
               Get new RPC
+	     <br />
             </Button>
 	   <br />
           <div>{flashbotsRpc}</div>
          <Divider />
        {bundle && (
-              <div class="center" style={{ width: "50%" }}>
+              <div class="center">
                 <ReactJson src={bundle} />
                 <Button
                   onClick={async () => {
@@ -93,6 +121,10 @@ const [bundle, setBundle] = useState();
             )}
 
             <Divider />
-     </div>
+            
+           <br />
+          <br />
+         </div>
+        </div>
   );
 }
