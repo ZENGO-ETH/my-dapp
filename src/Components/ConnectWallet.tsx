@@ -11,10 +11,12 @@ import { Web3 } from "web3";
 //import { delay } from "delay";
 //import { fetch } from "node-fetch";
 
+
 export default function Home() {
   const [walletAddress, setWalletAddress] = useState("");
   const [signer, setSigner] = useState();
   const [network, setNetwork] = useState('');
+  const [chainId, setChainId] = useState();
     
   const URL = "https://rpc-staging.flashbots.net?bundle=5a08282e-52cb-43a0-ac72-b55b70d5b5aa"
 
@@ -32,6 +34,8 @@ export default function Home() {
          
         const accounts = await provider.send("eth_requestAccounts", []);
         /* get signer */
+ 	const { name, chainId } = await provider.getNetwork();
+        setChainId(chainId);
         setSigner(provider.getSigner());
         
         /* local contract instance */
@@ -41,7 +45,7 @@ export default function Home() {
         console.error(err.message);
       }
     } else {
-      /* MetaMask is not installed */
+     /* MetaMask is not installed */
       console.log("Please install MetaMask");
     }
   };
@@ -53,6 +57,7 @@ export default function Home() {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         /* get accounts */
         const accounts = await provider.send("eth_accounts", []);
+        
         if (accounts.length > 0) {
           /* get signer */
           setSigner(provider.getSigner());
@@ -132,7 +137,8 @@ export default function Home() {
           </Button>
          </div>
   	  <br />
-          <br />
+          <div> <Button> {chainId} </Button> </div>
+	  <br />
 	  </div>
            <br />
            </div>

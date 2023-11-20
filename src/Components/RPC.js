@@ -71,12 +71,14 @@ const [bundle, setBundle] = useState();
       <div className="wrapper">
        <br />
        <h1>Get Ξther Get RPC </h1>
+         <div className="main">
             <Input
               value={bundleUuid}
               onChange={e => {
                 setBundleUuid(e.target.value);
               }}
             />
+	  </div>
 	    <br />
 	    <br />
             <Button
@@ -89,6 +91,7 @@ const [bundle, setBundle] = useState();
 	     <br />
             </Button>
 	   <br />
+           <br />
           <div>{flashbotsRpc}</div>
          <Divider />
        {bundle && (

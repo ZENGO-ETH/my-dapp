@@ -3,7 +3,6 @@
 }
 
 .wrapper Button {
-  color: black;
   background: MediumTurquoise;
 }
 
@@ -19,6 +18,11 @@
   margin-right: 390px;
 }
 
+.main {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
 .app-header {
   margin-bottom: 10px;
 }
@@ -26,12 +30,12 @@
 .wrapper {
   boxShadow: "5px 5px 10px -9px rgba(0,0,0,0.75)";
   position: "absolute";
-  backgroundColor: "rgba(0,0,0, 0.3)";
+  backgroundColor: red;
   borderBottomLeftRadius : 5px;
   borderBottomRightRadius: 5px;
   border-width: 4px;
   border-style: solid;
-  border-color: black;
+  border-color: DarkBlue;
   margin-left: 10px;
   margin-right: 10px;
 }
